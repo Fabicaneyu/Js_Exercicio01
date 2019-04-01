@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Exercício 1</title>
+</head>
+<body>
+    
+    <h2> Salário do usuário </h2>
+
+    <form>
+        Preencha aqui o seu Salário <input id="grana" type="number" placeholder="$" autofocus>
+        <br> <br>
+        <button type="button" onclick="money()">Status social</button>
+    </form>
+    <div id="msg"></div>
+
+</body>
+</html>
+
+<script>
+function money() {
+    if ( grana.value < 200 ) {
+        msg.innerHTML = '#precisodeajuda';
+    } else {
+        if ( grana.value > 5000 ) {
+            msg.innerHTML = '#amigodoneymar';
+        } else {
+            if ( grana.value < 1000) {
+                msg.innerHTML = '#aindatenhoqueralarmuito';
+            }
+            if ( grana.value >= 1000){
+                msg.innerHTML = '#estoumenospobre';
+            }
+            if (grana.value > 2500 ) {
+                msg.innerHTML = '#ostentação';
+            }
+        }
+    }
+}
+
+</script>
